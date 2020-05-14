@@ -19,17 +19,17 @@ setEventListenerForDraw(canvas);
 
 
 window.addEventListener('keydown', (event) => {
-    if (event.key == 'c') {
+    if (event.code == 'KeyC') {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.beginPath();
-    } else if (event.key == 'g') {
+    } else if (event.code == 'KeyG') {
         canvas.removeEventListener('mousemove', draw);
         ctx.beginPath();
     }
 });
 
 window.addEventListener('keyup', (event) => {
-    if (event.key == 'g') {
+    if (event.code == 'KeyG') {
         setEventListenerForDraw(canvas);
     }
 });
